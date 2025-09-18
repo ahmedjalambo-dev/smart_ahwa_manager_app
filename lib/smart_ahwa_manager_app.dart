@@ -1,7 +1,7 @@
 import 'package:smart_ahwa_manager_app/core/models/drink.dart';
 import 'package:smart_ahwa_manager_app/features/ahwa_manager/ahwa_manager.dart';
 import 'package:smart_ahwa_manager_app/features/reporting/daily_summary_report.dart';
-import 'package:smart_ahwa_manager_app/features/reporting/report_generator.dart';
+import 'package:smart_ahwa_manager_app/features/reporting/top_drinks_report.dart';
 
 void main() {
   final ahwa = AhwaManager();
