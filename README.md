@@ -1,25 +1,31 @@
 
-# Smart Ahwa Manager App
+# ☕ Smart Ahwa Manager App
 
-A simple yet robust command-line application for managing orders in a traditional coffee shop ('Ahwa'). This project is built with Dart and serves as a practical demonstration of **SOLID** design principles for creating scalable and maintainable software.
+A simple yet robust command-line application for managing orders in a traditional coffee shop ('Ahwa'). This project is built with Dart and serves as a practical demonstration of of **SOLID** and **Object-Oriented** principles for creating scalable and maintainable software.
 
-## Core Features
+-----
 
--   **Order Management**: Create and track customer orders for various drinks.
--   **Status Tracking**: Each order has a status (`pending` or `completed`) to manage workflow.
--   **Pending Orders Dashboard**: View a real-time dashboard of all currently pending orders.
--   **Extensible Reporting**: Generate insightful reports from order data. The system is designed to easily accommodate new report types.
-    -   **Daily Summary Report**: Calculates total orders served and total sales revenue.
-    -   **Top Selling Drinks Report**: Ranks drinks by their sales volume.
+## 🎯 Core Features 
 
-## Emphasis on SOLID Design Principles
+  - **Order Management**: Create and track customer orders for various drinks.
+  - **Status Tracking**: Each order has a status (`pending` or `completed`) to manage workflow.
+  - **Pending Orders Dashboard** 🖥️: View a real-time dashboard of all currently pending orders.
+  - **Extensible Reporting**: Generate insightful reports from order data. The system is designed to easily accommodate new report types.
+      - **Daily Summary Report**: Calculates total orders served and total sales revenue.
+      - **Top Selling Drinks Report**: Ranks drinks by their sales volume.
+
+-----
+
+## ✅ Emphasis on SOLID Design Principles 
 
 This project was built with a strong focus on the SOLID principles of object-oriented design.
 
-#### 1. Single Responsibility Principle (SRP)
+#### 1\. Single Responsibility Principle (SRP)
+
 The `OrderManager` class (`lib/core/services/order_manager.dart`) is responsible *only* for managing the lifecycle of orders (adding, completing, querying). It does not handle report generation or user interaction, ensuring a clear separation of concerns.
 
-#### 2. Open/Closed Principle (OCP)
+#### 2\. Open/Closed Principle (OCP)
+
 The reporting feature is designed to be open for extension but closed for modification. By depending on the `ReportGenerator` abstraction, new report types can be added simply by creating a new class that implements the interface. No changes are needed in the `AhwaManager` class.
 
 ```dart
@@ -36,7 +42,7 @@ class NewFinancialReport implements ReportGenerator {
     return '...';
   }
 }
-````
+```
 
 #### 3\. Dependency Inversion Principle (DIP)
 
@@ -56,7 +62,9 @@ class AhwaManager {
 }
 ```
 
-## Project Structure
+-----
+
+## 📁 Project Structure 
 
 The codebase is organized into two main layers to promote separation of concerns:
 
@@ -68,7 +76,9 @@ The codebase is organized into two main layers to promote separation of concerns
       - `reporting/`: Modules for generating different types of reports.
   - `lib/smart_ahwa_manager_app.dart`: The main entry point of the application.
 
-## How to Run
+-----
+
+## 🚀 How to Run 
 
 1.  **Ensure you have the Dart SDK installed.**
 
@@ -84,7 +94,9 @@ The codebase is organized into two main layers to promote separation of concerns
     dart run lib/smart_ahwa_manager_app.dart
     ```
 
-## Example Output
+-----
+
+## 💻 Example Output 
 
 Running the application will produce the following output, demonstrating the entire workflow from order creation to report generation.
 
